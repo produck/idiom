@@ -1,0 +1,31 @@
+{
+	"name": "@produck/idiom",
+	"version": "0.0.0",
+	"description": "Some frequently-used program expressions / functions.",
+	"publishConfig": {
+		"access": "public"
+	},
+	"main": "src/index.mjs",
+	"files": [
+		"src",
+		"tsconfig.json"
+	],
+	"types": "./src/index.d.ts",
+	"type": "module",
+	"devDependencies": {
+		"@types/mocha": "^10.0.6",
+		"@types/node": "^20.11.17",
+		"mocha": "^10.3.0",
+		"rollup": "^4.10.0"
+	},
+	"scripts": {
+		"test": "mocha \"**/*.spec.mjs\" -t 999999999",
+		"build": "rollup -c script/rollup.config.mjs",
+		"prepublishOnly": "npm run build"
+	},
+	"keywords": [
+		"utils"
+	],
+	"author": "ChaosLee",
+	"license": "MIT"
+}
