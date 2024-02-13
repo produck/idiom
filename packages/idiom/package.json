@@ -13,6 +13,7 @@
 	"types": "./src/index.d.ts",
 	"type": "module",
 	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.4",
 		"@types/mocha": "^10.0.6",
 		"@types/node": "^20.11.17",
 		"mocha": "^10.3.0",

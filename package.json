@@ -11,7 +11,10 @@
 		"publish": "npm run lint && lerna publish --no-private"
 	},
 	"workspaces": [
-		"packages/idiom"
+		"packages/idiom",
+		"packages/idiom-common",
+		"packages/idiom-browser",
+		"packages/idiom-document"
 	],
 	"devDependencies": {
 		"c8": "^9.1.0",
