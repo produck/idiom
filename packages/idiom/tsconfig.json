@@ -1,8 +1,9 @@
 {
 	"compilerOptions": {
 		"lib": [
-			"ESNext", "ES2023.Array"
+			"ESNext"
 		],
+		"alwaysStrict": false,
 		"allowJs": true,
 		"noEmit": true
 	}

@@ -37,6 +37,7 @@ export default moduleList.map(config => {
 
 	return defineConfig({
 		input: path.resolve('example/origin.ign.mjs'),
+		treeshake: 'smallest',
 		output: {
 			file: config.output,
 			format: config.format,
