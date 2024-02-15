@@ -1,7 +1,7 @@
 export { Intl, JSON, Math, Reflect } from './Global';
 
 export * as Global from "./Global";
-export * as BuildIn from "./BuildIn";
+export * as BuiltIn from "./BuiltIn";
 
 type PickStatic<T> = Omit<Pick<T, keyof T>, 'prototype' | symbol>;
 
@@ -33,14 +33,14 @@ export const Uint16Array: PickStatic<Uint16ArrayConstructor>;
 export const Uint32Array: PickStatic<Uint32ArrayConstructor>;
 
 type TypeName =
-| "bigint"
-| "boolean"
-| "function"
-| "number"
-| "object"
-| "string"
-| "symbol"
-| "undefined";
+	| "bigint"
+	| "boolean"
+	| "function"
+	| "number"
+	| "object"
+	| "string"
+	| "symbol"
+	| "undefined";
 
 export const Null: null;
 export const True: true;

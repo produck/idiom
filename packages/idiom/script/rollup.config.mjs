@@ -26,6 +26,17 @@ const moduleList = [
 		isExternal: true,
 		isMin: true,
 	},
+	{
+		output: path.resolve('example/bundle.esm.gen.cjs'),
+		format: 'esm',
+		isExternal: true,
+	},
+	{
+		output: path.resolve('example/bundle.esm.min.gen.cjs'),
+		format: 'esm',
+		isExternal: true,
+		isMin: true,
+	},
 ];
 
 export default moduleList.map(config => {

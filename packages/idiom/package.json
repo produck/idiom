@@ -10,7 +10,7 @@
 		"src",
 		"tsconfig.json"
 	],
-	"types": "./src/index.d.ts",
+	"types": "./types/index.d.ts",
 	"type": "module",
 	"devDependencies": {
 		"@rollup/plugin-terser": "^0.4.4",
