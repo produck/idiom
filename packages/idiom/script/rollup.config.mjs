@@ -27,12 +27,12 @@ const moduleList = [
 		isMin: true,
 	},
 	{
-		output: path.resolve('example/bundle.esm.gen.cjs'),
+		output: path.resolve('example/bundle.esm.gen.mjs'),
 		format: 'esm',
 		isExternal: true,
 	},
 	{
-		output: path.resolve('example/bundle.esm.min.gen.cjs'),
+		output: path.resolve('example/bundle.esm.min.gen.mjs'),
 		format: 'esm',
 		isExternal: true,
 		isMin: true,
