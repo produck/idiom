@@ -11,7 +11,9 @@
 		"tsconfig.json"
 	],
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "mocha \"**/*.spec.mjs\" -t 999999999",
+		"build": "rollup -c script/rollup.config.mjs",
+		"prepublishOnly": "npm run build"
 	},
 	"keywords": [
 		"assert",
@@ -22,5 +24,10 @@
 	"license": "MIT",
 	"dependencies": {
 		"@produck/idiom": "^0.0.0"
+	},
+	"devDependencies": {
+		"@types/mocha": "^10.0.6",
+		"mocha": "^10.3.0",
+		"rollup": "^4.11.0"
 	}
 }
