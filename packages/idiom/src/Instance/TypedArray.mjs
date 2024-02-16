@@ -5,7 +5,7 @@ export {
 	byteLength,
 	byteOffset,
 	length,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	at,

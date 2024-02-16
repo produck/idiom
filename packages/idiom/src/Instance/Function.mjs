@@ -4,7 +4,7 @@ export {
 	length,
 	name,
 	prototype,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	apply,

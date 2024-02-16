@@ -2,7 +2,7 @@ export * from './Object.mjs';
 
 export {
 	length,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	at,

@@ -1,4 +1,4 @@
-export * from './Global';
+export * from './Static';
 
 interface TypedArrayConstructor {}
 interface AsyncFunctionConstructor extends Function {}

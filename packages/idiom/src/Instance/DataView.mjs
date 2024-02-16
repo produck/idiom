@@ -4,7 +4,7 @@ export {
 	buffer,
 	byteLength,
 	byteOffset,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	getBigInt64,

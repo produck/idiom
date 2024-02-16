@@ -5,7 +5,7 @@ export {
 	detached,
 	maxByteLength,
 	resizable,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	resize,

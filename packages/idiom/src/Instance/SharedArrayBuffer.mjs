@@ -4,7 +4,7 @@ export {
 	byteLength,
 	growable,
 	maxByteLength,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	grow,

@@ -1,12 +1,12 @@
 export {
 	constructor,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	hasOwnProperty,
 	isPrototypeOf,
 	propertyIsEnumerable,
-	toLocalString,
+	toLocaleString,
 	toString,
 	valueOf,
 } from '../Accessor/Caller.mjs';

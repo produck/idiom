@@ -8,9 +8,15 @@ type TypeName =
 	| "symbol"
 	| "undefined";
 
-export const Null: null;
-export const True: true;
-export const False: false;
+export const NULL: null;
+export const TRUE: true;
+export const FALSE: false;
 export const TypeOf: (operand: any) => TypeName;
 export const InstanceOf: (object: object, Constructor: Function) => boolean;
 export const Throw: () => never;
+
+export {
+	NULL as null,
+	TRUE as true,
+	FALSE as false,
+};

@@ -12,7 +12,7 @@ export {
 	sticky,
 	unicode,
 	unicodeSets,
-} from '../Accessor/Getter.mjs';
+} from '../Accessor/GetterSetter.mjs';
 
 export {
 	exec,
