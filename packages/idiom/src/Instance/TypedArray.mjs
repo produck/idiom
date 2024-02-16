@@ -5,6 +5,7 @@ export {
 	byteLength,
 	byteOffset,
 	length,
+	BYTES_PER_ELEMENT,
 } from '../Accessor/GetterSetter.mjs';
 
 export {
