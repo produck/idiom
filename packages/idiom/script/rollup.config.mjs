@@ -53,7 +53,7 @@ export default moduleList.map(config => {
 			file: config.output,
 			format: config.format,
 			name: config.name,
-			banner: BANNER,
+			// banner: BANNER,
 			generatedCode: 'es2015',
 		},
 		plugins,

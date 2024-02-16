@@ -2,7 +2,7 @@ export * from './Global.mjs';
 
 import * as Global from './Global.mjs';
 import * as Object from './Static/Object.mjs';
-import * as Get from './Accessor/Getter.mjs';
+import { Getter as Get } from './Accessor/index.mjs';
 
 // Indexed collections
 export const TypedArray = Object.getPrototypeOf(Global.Int8Array);

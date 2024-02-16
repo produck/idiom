@@ -1,7 +1,8 @@
 export * as Generator from './Generator.mjs';
 export * as Caller from './Caller.mjs';
-export * as Getter from './Getter.mjs';
-export * as GetterSetter from './GetterSetter.mjs';
+
+import * as GetterSetter from './GetterSetter.mjs';
+export { GetterSetter, GetterSetter as Getter };
 
 import * as Global from '../Global.mjs';
 

@@ -1,5 +1,5 @@
 import { GetterCaller } from './Generator.mjs';
-import * as Getter from './Getter.mjs';
+import * as Getter from './GetterSetter.mjs';
 
 export const add = GetterCaller(Getter.add);
 export const apply = GetterCaller(Getter.apply);
