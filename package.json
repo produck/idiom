@@ -13,8 +13,7 @@
 	"workspaces": [
 		"packages/idiom",
 		"packages/idiom-common",
-		"packages/idiom-browser",
-		"packages/idiom-document"
+		"packages/idiom-whatwg"
 	],
 	"devDependencies": {
 		"c8": "^9.1.0",
