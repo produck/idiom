@@ -2,6 +2,9 @@ import { GetterCaller } from './Generator.mjs';
 import * as Getter from './GetterSetter.mjs';
 
 export const add = GetterCaller(Getter.add);
+export const all = GetterCaller(Getter.all);
+export const allSettled = GetterCaller(Getter.allSettled);
+export const any = GetterCaller(Getter.any);
 export const apply = GetterCaller(Getter.apply);
 export const at = GetterCaller(Getter.at);
 
@@ -100,12 +103,15 @@ export const pop = GetterCaller(Getter.pop);
 export const propertyIsEnumerable = GetterCaller(Getter.propertyIsEnumerable);
 export const push = GetterCaller(Getter.push);
 
+export const race = GetterCaller(Getter.race);
 export const reduce = GetterCaller(Getter.reduce);
 export const reduceRight = GetterCaller(Getter.reduceRight);
 export const register = GetterCaller(Getter.register);
+export const reject = GetterCaller(Getter.reject);
 export const repeat = GetterCaller(Getter.repeat);
 export const replace = GetterCaller(Getter.replace);
 export const replaceAll = GetterCaller(Getter.replaceAll);
+export const resolve = GetterCaller(Getter.resolve);
 export const reserve = GetterCaller(Getter.reserve);
 export const resize = GetterCaller(Getter.resize);
 
@@ -180,6 +186,8 @@ export const unshift = GetterCaller(Getter.unshift);
 
 export const valueOf = GetterCaller(Getter.valueOf);
 export const values = GetterCaller(Getter.values);
+
+export const withResolvers = GetterCaller(Getter.withResolvers);
 
 const _catch = GetterCaller(Getter.catch);
 const _delete = GetterCaller(Getter.delete);

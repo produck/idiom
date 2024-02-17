@@ -1,10 +1,10 @@
 import { Promise } from '../Global.mjs';
-import { Getter } from '../Accessor/index.mjs';
+import { Caller, Bind } from '../Accessor/index.mjs';
 
-export const all = Getter.all(Promise);
-export const allSettled = Getter.allSettled(Promise);
-export const any = Getter.any(Promise);
-export const race = Getter.race(Promise);
-export const reject = Getter.reject(Promise);
-export const resolve = Getter.resolve(Promise);
-export const withResolvers = Getter.withResolvers(Promise);
+export const all = Bind(Promise, Caller.all);
+export const allSettled = Bind(Promise, Caller.allSettled);
+export const any = Bind(Promise, Caller.any);
+export const race = Bind(Promise, Caller.race);
+export const reject = Bind(Promise, Caller.reject);
+export const resolve = Bind(Promise, Caller.resolve);
+export const withResolvers = Bind(Promise, Caller.withResolvers);
