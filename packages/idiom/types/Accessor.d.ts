@@ -347,6 +347,8 @@ export module GetterSetter {
 	}
 }
 
+export { GetterSetter as Getter };
+
 export module Caller {
 	export const add: Caller;
 	export const apply: Caller;
