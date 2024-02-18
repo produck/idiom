@@ -12,6 +12,4 @@ export { Instance, Instance as I };
 
 export * as New from './New.mjs';
 export * as Accessor from './Accessor/index.mjs';
-export * from './ES.mjs';
-
-export const AsGetter = getterSetter => object => getterSetter(object);
+export * as ES from './ES.mjs';

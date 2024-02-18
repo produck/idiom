@@ -12,9 +12,6 @@ export { Instance, Instance as I };
 
 export * as Accessor from './Accessor';
 export * as New from './New';
-export * from './ES';
+export * as ES from './ES';
 
-import { GetterSetter } from './Accessor';
-
-type Getter = <T extends object>(o: T) => T[keyof T];
-export function AsGetter(getterSetter: GetterSetter): Getter;
+export { AsGetter } from './Accessor';

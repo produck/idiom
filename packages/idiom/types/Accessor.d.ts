@@ -1,11 +1,12 @@
 type Caller<T = any> = (o: T, ...args: any) => any;
 type GetterSetter = <T extends object>(o: T, value?: any) => T[keyof T];
+type Getter = <T extends object>(o: T) => T[keyof T];
 type Constructor = abstract new (...args: any) => any;
 
 export function Bind<T>(target: T, caller: Caller): Caller;
+export function AsGetter(getterSetter: GetterSetter): Getter;
 
 export module Generator {
-	export function Getter(key: string): GetterSetter;
 	export function Caller(key: string): Caller;
 	export function GetterCaller(getter: GetterSetter): Caller;
 
@@ -16,7 +17,7 @@ export module Generator {
 	export function GetterSetter(key: string): GetterSetter;
 }
 
-export module Getter {
+export module GetterSetter {
 	export const abs: GetterSetter;
 	export const acos: GetterSetter;
 	export const acosh: GetterSetter;
