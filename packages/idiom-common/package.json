@@ -1,6 +1,6 @@
 {
 	"name": "@produck/idiom-common",
-	"version": "0.1.4",
+	"version": "0.2.0",
 	"description": "",
 	"publishConfig": {
 		"access": "public"
@@ -24,7 +24,7 @@
 	"author": "ChaosLee",
 	"license": "MIT",
 	"dependencies": {
-		"@produck/idiom": "^0.2.1"
+		"@produck/idiom": "^0.2.2"
 	},
 	"devDependencies": {
 		"@rollup/plugin-node-resolve": "^15.2.3",
