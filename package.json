@@ -8,7 +8,7 @@
 		"lint": "eslint --fix packages/**/*.mjs",
 		"test": "npm test --workspaces --if-present",
 		"coverage": "c8 --reporter=lcov npm run test",
-		"publish": "npm run lint && lerna publish --no-private"
+		"publish": "npm run lint && npm test && lerna publish --no-private"
 	},
 	"workspaces": [
 		"packages/idiom",

@@ -1,6 +1,6 @@
-import { Throw, New } from '@produck/idiom';
+import { ES, New } from '@produck/idiom';
 
-export const Thrower = New => message => Throw(New(message));
+export const Thrower = New => message => ES.Throw(New(message));
 
 export const ThrowError = Thrower(New.Error);
 export const ThrowEvalError = Thrower(New.EvalError);
