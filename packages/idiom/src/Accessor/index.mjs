@@ -6,4 +6,5 @@ export { GetterSetter, GetterSetter as Getter };
 
 import * as Global from '../Global.mjs';
 
+/*@__NO_SIDE_EFFECTS__*/
 export const Bind = (target, caller) => caller.bind(Global.undefined, target);

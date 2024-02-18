@@ -13,7 +13,8 @@
 	"workspaces": [
 		"packages/idiom",
 		"packages/idiom-common",
-		"packages/idiom-whatwg"
+		"packages/idiom-whatwg",
+		"packages/idiom-nodejs"
 	],
 	"devDependencies": {
 		"c8": "^9.1.0",
