@@ -1,7 +1,7 @@
 import { ThrowTemplatedTypeError } from './Error.mjs';
 
 const Assertor = (validator, _expected) => {
-	return/*@__NO_SIDE_EFFECTS__*/(value, role, expected = _expected) => {
+	return (value, role, expected = _expected) => {
 		if (!validator(value)) {
 			ThrowTemplatedTypeError(role, expected);
 		}
