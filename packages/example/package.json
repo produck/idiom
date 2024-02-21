@@ -1,0 +1,17 @@
+{
+	"name": "@produck/idiom-example",
+	"private": true,
+	"version": "0.0.0",
+	"description": "Examples & tests of @produck/idiom*",
+	"main": "src/index.mjs",
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@rollup/plugin-terser": "^0.4.4",
+		"rollup": "^4.12.0"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "ChaosLee",
+	"license": "MIT"
+}
