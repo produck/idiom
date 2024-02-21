@@ -135,3 +135,7 @@ dist
 # Specific ignored / generated.
 *.ign*
 *.gen*
+
+# Vitepress
+docs/.vitepress/dist
+docs/.vitepress/cache

@@ -1,24 +1,28 @@
 {
-	"name": "@produck/idiom-workspace",
-	"version": "0.0.0",
-	"private": true,
-	"scripts": {
-		"deps:install": "npm -v && npm install",
-		"deps:ci-install": "npm install --include=optional",
-		"lint": "eslint --fix packages/**/*.mjs",
-		"test": "npm test --workspaces --if-present",
-		"coverage": "c8 --reporter=lcov npm run test",
-		"publish": "npm run lint && npm test && lerna publish --no-private"
-	},
-	"workspaces": [
-		"packages/idiom",
-		"packages/idiom-common",
-		"packages/idiom-whatwg",
-		"packages/idiom-nodejs"
-	],
-	"devDependencies": {
-		"c8": "^9.1.0",
-		"eslint": "^8.56.0",
-		"lerna": "^8.1.2"
-	}
+  "name": "@produck/idiom-workspace",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deps:install": "npm -v && npm install",
+    "deps:ci-install": "npm install --include=optional",
+    "lint": "eslint --fix packages/**/*.mjs",
+    "test": "npm test --workspaces --if-present",
+    "coverage": "c8 --reporter=lcov npm run test",
+    "publish": "npm run lint && npm test && lerna publish --no-private",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "workspaces": [
+    "packages/idiom",
+    "packages/idiom-common",
+    "packages/idiom-whatwg",
+    "packages/idiom-nodejs"
+  ],
+  "devDependencies": {
+    "c8": "^9.1.0",
+    "eslint": "^8.56.0",
+    "lerna": "^8.1.2",
+    "vitepress": "^1.0.0-rc.44"
+  }
 }
