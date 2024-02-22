@@ -10,7 +10,7 @@
 		"coverage": "c8 --reporter=lcov npm run test",
 		"publish": "npm run lint && npm test && lerna publish --no-private",
 		"docs:dev": "vitepress dev docs",
-		"docs:build": "npm run build -w packages/example && build docs",
+		"docs:build": "npm run build -w packages/example && vitepress build docs",
 		"docs:preview": "vitepress preview docs"
 	},
 	"workspaces": [
@@ -20,6 +20,10 @@
 		"packages/idiom-nodejs",
 		"packages/example"
 	],
+	"optionalDependencies": {
+		"@nx/nx-linux-x64-gnu": "*",
+    "@rollup/rollup-linux-x64-gnu": "*"
+	},
 	"devDependencies": {
 		"c8": "^9.1.0",
 		"eslint": "^8.56.0",
