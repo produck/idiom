@@ -12,6 +12,7 @@ const FORMATS = {
 
 const moduleList = [
 	'src/idiom/ES',
+	'src/idiom/New',
 ];
 
 const configList = [];
