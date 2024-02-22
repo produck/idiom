@@ -5,42 +5,23 @@ import { defineConfig } from 'rollup';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
 
+const FORMATS = {
+	cjs: '.cjs',
+	esm: '.mjs',
+};
+
 const moduleList = [
-	{
-		output: path.resolve('dist/bundle.gen.cjs'),
-		format: 'cjs',
-		isExternal: true,
-	},
-	{
-		output: path.resolve('dist/bundle.min.gen.cjs'),
-		format: 'cjs',
-		isExternal: true,
-		isMin: true,
-	},
-	{
-		output: path.resolve('dist/bundle.esm.gen.mjs'),
-		format: 'esm',
-		isExternal: true,
-	},
-	{
-		output: path.resolve('dist/bundle.esm.min.gen.mjs'),
-		format: 'esm',
-		isExternal: true,
-		isMin: true,
-	},
+	'src/idiom/ES',
 ];
 
-export default moduleList.map(config => {
-	const plugins = [
-		nodeResolve({ preferBuiltins: false }),
-	];
+const configList = [];
 
-	if (config.isMin) {
-		plugins.push(terser());
-	}
+for (const input of moduleList) {
+	const inputPathname = path.resolve(input, 'raw.mjs');
+	const dirname = path.dirname(inputPathname);
 
-	return defineConfig({
-		input: path.resolve('test/Assert.spec.mjs'),
+	const base = defineConfig({
+		input: inputPathname,
 		treeshake: 'smallest',
 		external: [
 			'mocha',
@@ -48,11 +29,37 @@ export default moduleList.map(config => {
 			...builtinModules.map(name => `node:${name}`),
 		],
 		output: {
-			file: config.output,
-			format: config.format,
-			name: config.name,
 			generatedCode: 'es2015',
 		},
-		plugins,
+		plugins: [
+			nodeResolve({ preferBuiltins: false }),
+		],
 	});
-});
+
+	for (const format in FORMATS) {
+		const ext = FORMATS[format];
+
+		for (const isMin of [true, false]) {
+			const plugins = [];
+
+			if (isMin) {
+				plugins.push(terser());
+			}
+
+			configList.push({
+				...base,
+				output: {
+					...base.output,
+					file: path.join(dirname, `${isMin ? '.min' : ''}.gen${ext}`),
+					format,
+				},
+				plugins: [
+					...base.plugins,
+					...plugins,
+				],
+			});
+		}
+	}
+}
+
+export default configList;
