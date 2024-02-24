@@ -9,7 +9,7 @@ export default defineConfig({
 
 	themeConfig: {
 		nav: [
-			{ text: 'Guide', link: '/guide' },
+			{ text: 'Guide', link: '/zh/guide/what-is-idiom' },
 			{ text: 'API Reference', link: '/api' },
 			{ text: 'Examples', link: '/zh/examples/statement' },
 			{ text: 'Produck', link: 'https://produckjs.com/zh/' }
@@ -20,6 +20,19 @@ export default defineConfig({
 				items: [
 					{ text: 'ECMAScript 语句', link: '/statement' },
 					{ text: 'new 构造函数', link: '/new' }
+				]
+			},
+			'/zh/guide/': {
+				base: '/zh/guide',
+				items: [
+					{
+						text: '简介',
+						collapsed: false,
+						items: [
+							{ text: '什么是 Idiom', link: '/what-is-idiom' },
+							{ text: '快速开始', link: '/getting-started' }
+						]
+					}
 				]
 			}
 		},
