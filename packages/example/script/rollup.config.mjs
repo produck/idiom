@@ -11,21 +11,22 @@ const FORMATS = {
 };
 
 const moduleList = [
-	'src/idiom/ES',
-	'src/idiom/New',
+	'no-destructuring',
+	'destructuring',
+	'es-statement',
+	'new-constructor',
 ];
 
 const configList = [];
 
 for (const input of moduleList) {
-	const inputPathname = path.resolve(input, 'raw.mjs');
+	const inputPathname = path.resolve('src', input, 'raw.mjs');
 	const dirname = path.dirname(inputPathname);
 
 	const base = defineConfig({
 		input: inputPathname,
 		treeshake: 'smallest',
 		external: [
-			'mocha',
 			...builtinModules,
 			...builtinModules.map(name => `node:${name}`),
 		],

@@ -52,8 +52,4 @@ const { site, theme, page, frontmatter } = useData()
 
 ## More
 
-<<< @/../packages/example/src/idiom/ES/raw.mjs{js}
-
-<<< @/../packages/example/src/idiom/ES/.min.gen.mjs{js}
-
 Check out the documentation for the [full list of runtime APIs](https://vitepress.dev/reference/runtime-api#usedata).

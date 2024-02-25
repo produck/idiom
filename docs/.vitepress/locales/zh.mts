@@ -9,10 +9,10 @@ export default defineConfig({
 
 	themeConfig: {
 		nav: [
-			{ text: 'Guide', link: '/zh/guide/what-is-idiom' },
-			{ text: 'API Reference', link: '/api' },
-			{ text: 'Examples', link: '/zh/examples/statement' },
-			{ text: 'Produck', link: 'https://produckjs.com/zh/' }
+			{ text: '指南', link: '/zh/guide/what-is-idiom' },
+			{ text: 'API 参考', link: '/api' },
+			{ text: '示例', link: '/zh/examples/statement' },
+			{ text: 'Produck工作台', link: 'https://produckjs.com/zh/' }
 		],
 		sidebar: {
 			'/zh/examples/': {
@@ -24,17 +24,40 @@ export default defineConfig({
 			},
 			'/zh/guide/': {
 				base: '/zh/guide',
-				items: [
-					{
-						text: '简介',
-						collapsed: false,
-						items: [
-							{ text: '什么是 Idiom', link: '/what-is-idiom' },
-							{ text: '快速开始', link: '/getting-started' }
-						]
-					}
-				]
-			}
+				items: [{
+					text: '简介',
+					collapsed: false,
+					items: [
+						{ text: '什么是 Idiom？', link: '/what-is-idiom' },
+						{ text: '快速开始', link: '/getting-started' },
+					]
+				}, {
+					text: '命名空间',
+					collapsed: false,
+					items: [
+						{ text: 'ES', link: '/what-is-idio' },
+						{ text: 'Global', link: '/what-is-idio' },
+						{ text: 'BuiltIn', link: '/what-is-idio' },
+						{ text: 'Static', link: '/what-is-idio' },
+						{ text: 'Instance', link: '/what-is-idio' },
+						{ text: 'New', link: '/what-is-idio' },
+						{ text: 'Accessor', link: '/what-is-idio' },
+						{ text: '实用工具', link: '/what-is-idio' },
+					]
+				}, {
+					text: '定义土语',
+					collapsed: false,
+					items: [
+						{ text: '访问器' },
+						{ text: '调用器' },
+						{ text: '使用访问器生成器' },
+					]
+				}, {
+					text: '关于副作用'
+				}, {
+					text: '为何人工处理？'
+				}]
+			},
 		},
 		docFooter: {
 			prev: '上一章',
