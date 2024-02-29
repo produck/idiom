@@ -15,6 +15,7 @@ const moduleList = [
 	'destructuring',
 	'es-statement',
 	'new-constructor',
+	'simple',
 ];
 
 const configList = [];

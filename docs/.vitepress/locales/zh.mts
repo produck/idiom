@@ -1,8 +1,6 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-	title: "Idiom（土语）",
-	titleTemplate: ':title - Produck',
 	description: "@produck/idiom的文档",
 	cleanUrls: true,
 	lastUpdated: true,
@@ -52,6 +50,9 @@ export default defineConfig({
 						{ text: '调用器' },
 						{ text: '使用访问器生成器' },
 					]
+				}, {
+					text: '是否应该解构?',
+					link: '/destructuring-or-not'
 				}, {
 					text: '关于副作用'
 				}, {

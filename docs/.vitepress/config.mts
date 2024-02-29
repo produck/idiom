@@ -60,6 +60,9 @@ export default defineConfig({
 						{ text: 'Accessor Generator' },
 					]
 				}, {
+					text: 'Destructuring or Not?',
+					link: '/destructuring-or-not'
+				}, {
 					text: 'About Side Effects'
 				}, {
 					text: 'Why manual?'
@@ -67,7 +70,7 @@ export default defineConfig({
 			},
 		},
 		socialLinks: [
-			{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+			{ icon: 'github', link: 'https://github.com/produck/idiom' }
 		],
 		externalLinkIcon: true,
 	},

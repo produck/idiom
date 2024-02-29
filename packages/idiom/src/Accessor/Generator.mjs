@@ -15,5 +15,5 @@ export const GetterSetter = key => {
 
 /*@__NO_SIDE_EFFECTS__*/
 export const Caller = ({ k }) => {
-	return /*@__NO_SIDE_EFFECTS__*/(o, ...args) => o[k](...args);
+	return (o, ...args) => o[k](...args);
 };
