@@ -3,22 +3,25 @@
 layout: home
 
 hero:
-  name: "Idiom（土语）"
+  name: "Idiom"
   text: "换一个表达方式"
-  tagline: 帮助所有最终工程的构建结果更简短、更晦涩
+  tagline: 更简短、更晦涩。按需取用改进构建目标！
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速开始
+      link: /zh/guide/getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: GitHub
+      link: https://github.com/produck/idiom
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 更简短
+    details: 使用新的函数名替代表达式，配合 Terser 得到更短的生成代码。
+    icon: ✌️
+  - title: 更晦涩
+    details: 带属性名的表达式被新的函数替代，在生成结果里再也看不到原先的属性名。
+    icon: 🙈
+  - title: 按需取用
+    details: 没有强制要求，根据具体现实情况，想用就用，用的越多收益越多。
+    icon: 🤓
 ---

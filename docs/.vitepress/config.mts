@@ -73,6 +73,9 @@ export default defineConfig({
 			{ icon: 'github', link: 'https://github.com/produck/idiom' }
 		],
 		externalLinkIcon: true,
+    search: {
+      provider: 'local'
+    },
 	},
 
 	locales: {

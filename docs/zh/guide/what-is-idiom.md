@@ -1,8 +1,8 @@
 # Idiom 是什么？ {#what-is-idiom}
 
-Idiom（土语）是替代一些常用语句的符号集合，只针对遵循了 ESM 规范，并使用 [Rollup](https://cn.rollupjs.org/) 构建的工程。利用[去屑](https://cn.rollupjs.org/faqs/#what-is-tree-shaking)特性，让构建后的制品更简短、更晦涩。有时也对提升常用语句的重用程度有所帮助。
+Idiom（土语）是用于替代一些常用语句的符号集合。它只帮助那些遵循了 ESM 规范，并使用 [Rollup](https://cn.rollupjs.org/) 构建的工程。利用[去屑](https://cn.rollupjs.org/faqs/#what-is-tree-shaking)特性和 [@rollup/plugin-terser](https://github.com/rollup/plugins/tree/master/packages/terser#readme)，让构建后的制品更简短、更晦涩。有时也对提升常用语句的重用程度有所帮助。
 
-总之，Idiom 只是用另一套符号代替原来的语句的编码方案。它很纯粹，不多做额外的事情。
+总之，Idiom 只是用于实现另一种编码方式的模块，很纯粹，不多做额外的事情。
 
 ::: tip 提示
 
@@ -27,6 +27,8 @@ Idiom（土语）是替代一些常用语句的符号集合，只针对遵循了
 ## 使用场景 {#use-cases}
 
 任何 ECMAScript / [TypeScript](https://www.typescriptlang.org/) 工程，遵循 ESM 标准开发，最终使用 Rollup 构建，构建目标可以是任意格式（[`output.format`](https://rollupjs.org/configuration-options/#output-format)）。支持所有执行环境包括 [Node.js](https://nodejs.org/en)、浏览器（Firefox、Chrome、Edge 等）。
+
+具体地说，`@produck/idiom`模块只针对 [ECMAScript](https://tc39.es/ecma262/) 的标准所包含的内容进行实现。也就是说，该项目不包含有关 DOM、Node.js 标准库等相关内容
 
 ## 开发体验 {#developer-experience}
 

@@ -1,5 +1,7 @@
 # 快速开始 {#getting-started}
 
+
+
 ## 安装 {#installation}
 
 - [Node.js](https://nodejs.org/) 18 及以上版本。
