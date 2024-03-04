@@ -28,6 +28,8 @@ export default defineConfig({
 					items: [
 						{ text: '什么是 Idiom？', link: '/what-is-idiom' },
 						{ text: '快速开始', link: '/getting-started' },
+						{ text: '命名空间总览', link: '/namespaces' },
+						{ text: 'Rollup 配置', link: '/rollup-configuration' },
 					]
 				}, {
 					text: '命名空间',

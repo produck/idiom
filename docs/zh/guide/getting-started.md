@@ -40,9 +40,9 @@ Idiom 使用起来非常简单，按需导入命名空间符号，按需改写�
 
 ::: code-group
 
-<<< @/../packages/example/src/simple-classical/raw.mjs{4,5,6 js} [传统形式]
+<<< @/../packages/example/src/simple/raw.mjs{1,6,7,8 js} [使用Idiom]
 
-<<< @/../packages/example/src/simple/raw.mjs{6,7,8 js} [使用Idiom]
+<<< @/../packages/example/src/simple-classical/raw.mjs{4,5,6 js} [传统形式]
 
 :::
 
@@ -50,11 +50,11 @@ Idiom 使用起来非常简单，按需导入命名空间符号，按需改写�
 
 ::: code-group
 
-<<< @/../packages/example/src/simple/.gen.mjs{js} [ESM]
+<<< @/../packages/example/src/simple/.gen.mjs{22-30 js} [ESM]
 
 <<< @/../packages/example/src/simple/.min.gen.mjs{js} [ESM+Terser]
 
-<<< @/../packages/example/src/simple/.gen.cjs{js} [CJS]
+<<< @/../packages/example/src/simple/.gen.cjs{24-32 js} [CJS]
 
 <<< @/../packages/example/src/simple/.min.gen.cjs{js} [CJS+Terser]
 
@@ -68,8 +68,8 @@ Idiom 使用起来非常简单，按需导入命名空间符号，按需改写�
 
 ## 下一步 {#what-s-next}
 
-- 了解所有命名空间
+- 初步了解 Idiom 具体包含了哪些命名空间，继续阅读[命名空间总览](/zh/guide/namespaces)。
 
-- 相关Rollup的构建配置
+- 为了发挥 Idiom 的最大效果，请参考相关 [Rollup 配置](/zh/guide/rollup-configuration)。
 
-- 它的简单使用范围
+- 使用命名空间看上去有些繁琐，也许可以结构它，参考[是否应该解构](/zh/guide/destructuring-or-not)来进一步思考。
