@@ -12,11 +12,29 @@ Idiom（土语）是用于替代一些常用语句的符号集合。它只帮助
 
 ## 背景 {#background}
 
-我们时常觉得在一个构建制品中，存在`Object.defineProperty(...)`这样的表达式，是有优化空间的。目前至少存在两个问题：
+我们时常觉得在一个构建制品中，存在`Object.defineProperty(...)`这样的表达式，是有优化空间的。
+
+::: code-group
+
+<<< @/../packages/example/src/object-define-property-classical/.min.gen.mjs{js} [ESM+Terser]
+
+<<< @/../packages/example/src/object-define-property-classical/raw.mjs{2,9,12,15,18,24 js} [原文]
+
+:::
+
+目前至少存在两个问题：
   - 原表达式字符串较长，多次使用这个语句会 **使制品偏大**。
   - 有时不希望在制品中 **暴露程序意图**，但上述的表达式最终不能被构建工具安全替换。
 
 由此，为了适应 Rollup + [@rollup/plugin-terser](https://github.com/rollup/plugins/tree/master/packages/terser#readme) 的工具链特性，Idiom 使用函数定义的标识符取代了这些表达式，从而降低制品大小，表达更晦涩。
+
+::: code-group
+
+<<< @/../packages/example/src/object-define-property/.min.gen.mjs{js} [ESM+Terser]
+
+<<< @/../packages/example/src/object-define-property/raw.mjs{4,11,14,17,20,26 js} [原文]
+
+:::
 
 ::: tip 提示
 

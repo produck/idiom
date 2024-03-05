@@ -16,6 +16,8 @@ const moduleList = [
 	'es-statement',
 	'new-constructor',
 	'simple',
+	'object-define-property',
+	'object-define-property-classical',
 ];
 
 const configList = [];
