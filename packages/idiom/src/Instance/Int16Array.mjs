@@ -1,1 +1,0 @@
-export * from './TypedArray.mjs';

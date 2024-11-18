@@ -8,14 +8,13 @@
 	"main": "src/index.mjs",
 	"files": [
 		"src",
-		"types",
 		"tsconfig.json"
 	],
-	"types": "./types/index.d.ts",
+	"types": "./src/index.d.ts",
 	"type": "module",
-	"devDependencies": {
-		"@types/mocha": "^10.0.6",
-		"mocha": "^10.3.0"
+	"exports": {
+		"types": "./src/index.d.ts",
+		"import": "./src/index.mjs"
 	},
 	"scripts": {
 		"test": "mocha \"**/*.spec.mjs\" -t 999999999",
@@ -25,5 +24,8 @@
 		"utils"
 	],
 	"author": "ChaosLee",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"@produck/ow": "^0.1.2"
+	}
 }
