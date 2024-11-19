@@ -4,7 +4,23 @@ import { describe, it } from 'mocha';
 import * as Idiom from '../src/index.mjs';
 
 describe('::Assert', function () {
-	describe.skip('::Type', function () {
+	describe('::AssertBuilder', function () {
+		it('should throw if bad role.', function () {
+			Assert.throws(() => Idiom.Assert.Array([], null), {
+				name: 'TypeError',
+				message: 'Invalid "role", one "string" expected.',
+			});
+		});
+
+		it('should throw if bad expected.', function () {
+			Assert.throws(() => Idiom.Assert.Array([], 'foo', null), {
+				name: 'TypeError',
+				message: 'Invalid "expected", one "string" expected.',
+			});
+		});
+	});
+
+	describe('::Type', function () {
 		for (const { name, assert, ok, invalid } of [{
 			name: 'BigInt',
 			assert: Idiom.Assert.Type.BigInt,
@@ -65,161 +81,167 @@ describe('::Assert', function () {
 		}
 	});
 
-	for (const { name, assert, ok, invalid } of [{
+	const DEFAULT_INVALID = [{}];
+
+	for (const { name, assert, ok, invalid = DEFAULT_INVALID } of [{
 		name: 'AggregateError',
 		assert: Idiom.Assert.AggregateError,
 		ok: [new AggregateError([])],
-		invalid: [new Error],
 	}, {
 		name: 'Array',
 		assert: Idiom.Assert.Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [[], new Array(1)],
 	}, {
 		name: 'ArrayBuffer',
 		assert: Idiom.Assert.ArrayBuffer,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new ArrayBuffer(1)],
 	}, {
 		name: 'AsyncFunction',
 		assert: Idiom.Assert.AsyncFunction,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [async () => {}, async function() {}],
 	}, {
 		name: 'AsyncGeneratorFunction',
 		assert: Idiom.Assert.AsyncGeneratorFunction,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [async function*() {}],
 	}, {
 		name: 'BigInt64Array',
 		assert: Idiom.Assert.BigInt64Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new BigInt64Array(1)],
 	}, {
 		name: 'BigUint64Array',
 		assert: Idiom.Assert.BigUint64Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new BigUint64Array(1)],
 	}, {
 		name: 'DataView',
 		assert: Idiom.Assert.DataView,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new DataView(new ArrayBuffer(1))],
 	}, {
 		name: 'Date',
 		assert: Idiom.Assert.Date,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Date()],
 	}, {
 		name: 'Error',
 		assert: Idiom.Assert.Error,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Error('')],
 	}, {
 		name: 'EvalError',
 		assert: Idiom.Assert.EvalError,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new EvalError('')],
 	}, {
 		name: 'FinalizationRegistry',
 		assert: Idiom.Assert.FinalizationRegistry,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new FinalizationRegistry(() => {})],
 	}, {
 		name: 'Finite',
 		assert: Idiom.Assert.Finite,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [1, 2, 0],
+		invalid: [Infinity, -Infinity],
 	}, {
 		name: 'Float32Array',
 		assert: Idiom.Assert.Float32Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Float32Array()],
 	}, {
 		name: 'Float64Array',
 		assert: Idiom.Assert.Float64Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Float64Array()],
 	}, {
 		name: 'GeneratorFunction',
 		assert: Idiom.Assert.GeneratorFunction,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [function*() {}],
 	}, {
 		name: 'Int16Array',
 		assert: Idiom.Assert.Int16Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Int16Array(1)],
 	}, {
 		name: 'Int32Array',
 		assert: Idiom.Assert.Int32Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Int32Array(1)],
 	}, {
 		name: 'Int8Array',
 		assert: Idiom.Assert.Int8Array,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Int8Array(1)],
 	}, {
 		name: 'Integer',
 		assert: Idiom.Assert.Integer,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [1, 2, 3, 10],
+		invalid: [0.1, 0.3],
 	}, {
 		name: 'Map',
 		assert: Idiom.Assert.Map,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Map()],
 	}, {
 		name: 'Null',
 		assert: Idiom.Assert.Null,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [null],
 	}, {
 		name: 'Promise',
 		assert: Idiom.Assert.Promise,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [Promise.resolve(1)],
 	}, {
 		name: 'RangeError',
 		assert: Idiom.Assert.RangeError,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new RangeError('')],
 	}, {
 		name: 'ReferenceError',
 		assert: Idiom.Assert.ReferenceError,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new ReferenceError('')],
 	}, {
 		name: 'RegExp',
 		assert: Idiom.Assert.RegExp,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [/1/, new RegExp('a')],
 	}, {
 		name: 'SafeInteger',
 		assert: Idiom.Assert.SafeInteger,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [1, Number.MAX_SAFE_INTEGER],
+		invalid: [Number.MAX_VALUE],
 	}, {
 		name: 'Set',
 		assert: Idiom.Assert.Set,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Set()],
 	}, {
 		name: 'SharedArrayBuffer',
 		assert: Idiom.Assert.SharedArrayBuffer,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new SharedArrayBuffer(16)],
 	}, {
 		name: 'TypeError',
 		assert: Idiom.Assert.TypeError,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new TypeError('')],
 	}, {
 		name: 'TypedArray',
 		assert: Idiom.Assert.TypedArray,
-		ok: [new AggregateError([])],
-		invalid: [new Error],
+		ok: [new Int8Array(1)],
+	}, {
+		name: 'URIError',
+		assert: Idiom.Assert.URIError,
+		ok: [new URIError('')],
+	}, {
+		name: 'Uint16Array',
+		assert: Idiom.Assert.Uint16Array,
+		ok: [new Uint16Array(1)],
+	}, {
+		name: 'Uint32Array',
+		assert: Idiom.Assert.Uint32Array,
+		ok: [new Uint32Array(1)],
+	}, {
+		name: 'Uint8Array',
+		assert: Idiom.Assert.Uint8Array,
+		ok: [new Uint8Array(1)],
+	}, {
+		name: 'Uint8ClampedArray',
+		assert: Idiom.Assert.Uint8ClampedArray,
+		ok: [new Uint8ClampedArray(1)],
+	}, {
+		name: 'WeakMap',
+		assert: Idiom.Assert.WeakMap,
+		ok: [new WeakMap()],
+	}, {
+		name: 'WeakRef',
+		assert: Idiom.Assert.WeakRef,
+		ok: [new WeakRef({})],
+	}, {
+		name: 'WeakSet',
+		assert: Idiom.Assert.WeakSet,
+		ok: [new WeakSet()],
 	}]) {
 		describe(`::${name}()`, function () {
 			it('should be ok.', function () {

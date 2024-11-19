@@ -1,18 +1,3 @@
-export namespace ES {
-	type TypeName =
-		| "bigint"
-		| "boolean"
-		| "function"
-		| "number"
-		| "object"
-		| "string"
-		| "symbol"
-		| "undefined";
-
-	export const TypeOf: (operand: any) => TypeName;
-	export const InstanceOf: (object: object, Constructor: Function) => boolean;
-}
-
 export namespace Is {
 	type Validator = (any: any) => boolean;
 
