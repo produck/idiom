@@ -22,42 +22,42 @@ describe('::Assert', function () {
 
 	describe('::Type', function () {
 		for (const { name, assert, ok, invalid } of [{
-			name: 'BigInt',
+			name: 'bigint',
 			assert: Idiom.Assert.Type.BigInt,
 			ok: [BigInt(1)],
 			invalid: [1, '', Function],
 		}, {
-			name: 'Boolean',
+			name: 'boolean',
 			assert: Idiom.Assert.Type.Boolean,
 			ok: [true, false],
 			invalid: [1, null, ''],
 		}, {
-			name: 'Function',
+			name: 'function',
 			assert: Idiom.Assert.Type.Function,
 			ok: [() => {}, function () {}, async function () {}],
 			invalid: [1, null, '', true, false],
 		}, {
-			name: 'Number',
+			name: 'number',
 			assert: Idiom.Assert.Type.Number,
 			ok: [1, -Infinity, 0.001],
 			invalid: ['', true, null, {}],
 		}, {
-			name: 'Object',
+			name: 'object',
 			assert: Idiom.Assert.Type.Object,
 			ok: [null, {}, [], new Date()],
 			invalid: [1, true, '', () => {}],
 		}, {
-			name: 'String',
+			name: 'string',
 			assert: Idiom.Assert.Type.String,
 			ok: ['11', 'a'],
 			invalid: [1, null, {}, true],
 		}, {
-			name: 'Symbol',
+			name: 'symbol',
 			assert: Idiom.Assert.Type.Symbol,
 			ok: [Symbol.iterator, Symbol()],
 			invalid: [11, 'a', true, null, {}],
 		}, {
-			name: 'Undefined',
+			name: 'undefined',
 			assert: Idiom.Assert.Type.Undefined,
 			ok: [undefined, void 0],
 			invalid: [11, 'a', null],
