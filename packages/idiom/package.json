@@ -1,6 +1,6 @@
 {
 	"name": "@produck/idiom",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "Some frequently-used program expressions / functions.",
 	"publishConfig": {
 		"access": "public"
