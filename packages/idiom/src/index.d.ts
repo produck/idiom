@@ -27,7 +27,6 @@ export namespace Is {
 	export const WeakSet: Validator;
 	export const WeakRef: Validator;
 	export const ArrayBuffer: Validator;
-	export const SharedArrayBuffer: Validator;
 	export const DataView: Validator;
 	export const FinalizationRegistry: Validator;
 	export const Promise: Validator;
@@ -84,7 +83,6 @@ export namespace Assert {
 	export const WeakSet: Assert;
 	export const WeakRef: Assert;
 	export const ArrayBuffer: Assert;
-	export const SharedArrayBuffer: Assert;
 	export const DataView: Assert;
 	export const FinalizationRegistry: Assert;
 	export const Promise: Assert;

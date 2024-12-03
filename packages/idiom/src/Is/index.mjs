@@ -14,7 +14,6 @@ export const WeakMap = any => ES.InstanceOf(any, B.WeakMap);
 export const WeakSet = any => ES.InstanceOf(any, B.WeakSet);
 export const WeakRef = any => ES.InstanceOf(any, B.WeakRef);
 export const ArrayBuffer = any => ES.InstanceOf(any, B.ArrayBuffer);
-export const SharedArrayBuffer = any => ES.InstanceOf(any, B.SharedArrayBuffer);
 export const DataView = any => ES.InstanceOf(any, B.DataView);
 export const FinalizationRegistry = any => ES.InstanceOf(any, B.FinalizationRegistry);
 export const Promise = any => ES.InstanceOf(any, B.Promise);

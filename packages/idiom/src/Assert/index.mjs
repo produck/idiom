@@ -14,7 +14,6 @@ export const WeakMap = Assert(Is.WeakMap, 'WeakMap');
 export const WeakSet = Assert(Is.WeakSet, 'WeakSet');
 export const WeakRef = Assert(Is.WeakRef, 'WeakRef');
 export const ArrayBuffer = Assert(Is.ArrayBuffer, 'ArrayBuffer');
-export const SharedArrayBuffer = Assert(Is.SharedArrayBuffer, 'SharedArrayBuffer');
 export const DataView = Assert(Is.DataView, 'DataView');
 export const FinalizationRegistry = Assert(Is.FinalizationRegistry, 'FinalizationRegistry');
 export const Promise = Assert(Is.Promise, 'Promise');

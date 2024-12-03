@@ -130,14 +130,12 @@ export {
 
 // Structured data
 const _ArrayBuffer = ArrayBuffer;
-const _SharedArrayBuffer = SharedArrayBuffer;
 const _DataView = DataView;
 const _Atomics = Atomics;
 const _JSON = JSON;
 
 export {
 	_ArrayBuffer as ArrayBuffer,
-	_SharedArrayBuffer as SharedArrayBuffer,
 	_DataView as DataView,
 	_Atomics as Atomics,
 	_JSON as JSON,

@@ -199,10 +199,6 @@ describe('::Assert', function () {
 		assert: Idiom.Assert.Set,
 		ok: [new Set()],
 	}, {
-		name: 'SharedArrayBuffer',
-		assert: Idiom.Assert.SharedArrayBuffer,
-		ok: [new SharedArrayBuffer(16)],
-	}, {
 		name: 'TypeError',
 		assert: Idiom.Assert.TypeError,
 		ok: [new TypeError('')],

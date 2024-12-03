@@ -133,11 +133,6 @@ describe('::Is', function () {
 		ok: [new ArrayBuffer()],
 		bad: [1, 3, '1'],
 	}, {
-		name: 'SharedArrayBuffer',
-		is: Idiom.Is.SharedArrayBuffer,
-		ok: [new SharedArrayBuffer(1)],
-		bad: [1, 3, '1'],
-	}, {
 		name: 'DataView',
 		is: Idiom.Is.DataView,
 		ok: [new DataView(new ArrayBuffer(1))],
