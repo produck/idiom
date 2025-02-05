@@ -26,6 +26,6 @@
 	"author": "ChaosLee",
 	"license": "MIT",
 	"dependencies": {
-		"@produck/ow": "^0.1.2"
+		"@produck/ow": "^0.1.3"
 	}
 }
