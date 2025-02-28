@@ -2,23 +2,21 @@
 	"name": "@produck/idiom",
 	"version": "0.4.2",
 	"description": "Some frequently-used program expressions / functions.",
+	"files": [
+		"src"
+	],
 	"publishConfig": {
 		"access": "public"
 	},
 	"main": "src/index.mjs",
-	"files": [
-		"src",
-		"tsconfig.json"
-	],
-	"types": "./src/index.d.ts",
+	"types": "src/index.d.ts",
 	"type": "module",
 	"exports": {
 		"types": "./src/index.d.ts",
 		"import": "./src/index.mjs"
 	},
 	"scripts": {
-		"test": "mocha \"**/*.spec.mjs\" -t 999999999",
-		"build": "rollup -c script/rollup.config.mjs"
+		"test": "mocha \"**/*.spec.mjs\" -t 999999999"
 	},
 	"keywords": [
 		"utils"
@@ -26,6 +24,6 @@
 	"author": "ChaosLee",
 	"license": "MIT",
 	"dependencies": {
-		"@produck/ow": "^0.1.3"
+		"@produck/ow": "^0.1.4"
 	}
 }
